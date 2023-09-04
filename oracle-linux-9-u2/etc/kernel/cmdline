@@ -1,0 +1,1 @@
+root=/dev/mapper/ol-root ro crashkernel=1G-64G:448M,64G-:512M rd.lvm.lv=ol/root rhgb quiet 

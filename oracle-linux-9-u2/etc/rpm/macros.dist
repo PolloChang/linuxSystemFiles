@@ -1,0 +1,7 @@
+# dist macros.
+
+%rhel 9
+%dist .el9
+%el9 1
+%oraclelinux 9
+%ol9 1

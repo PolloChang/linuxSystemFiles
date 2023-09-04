@@ -1,0 +1,14 @@
+[Unit]
+Description=Libvirt qemu admin socket
+Before=virtqemud.service
+BindsTo=virtqemud.socket
+After=virtqemud.socket
+
+
+[Socket]
+ListenStream=/run/libvirt/virtqemud-admin-sock
+Service=virtqemud.service
+SocketMode=0600
+
+[Install]
+WantedBy=sockets.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Libvirt nwfilter local socket
+Before=virtnwfilterd.service
+
+
+[Socket]
+ListenStream=/run/libvirt/virtnwfilterd-sock
+Service=virtnwfilterd.service
+SocketMode=0666
+RemoveOnStop=yes
+
+[Install]
+WantedBy=sockets.target

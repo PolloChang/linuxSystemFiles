@@ -1,0 +1,13 @@
+[Unit]
+Description=Libvirt qemu local socket
+Before=virtqemud.service
+
+
+[Socket]
+ListenStream=/run/libvirt/virtqemud-sock
+Service=virtqemud.service
+SocketMode=0666
+RemoveOnStop=yes
+
+[Install]
+WantedBy=sockets.target
